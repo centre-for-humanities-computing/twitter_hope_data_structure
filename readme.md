@@ -6,7 +6,7 @@ A brief introduction to the data structure for the HOPE project
 ## Folder Structure
 Located on Grundtvig on: `/data`
 ```
-001_twitter_hope
+twitter_hope_001
 ├── raw
 │   ├── rehydration DATE
 │   │   ├── readme.md
@@ -19,7 +19,7 @@ Located on Grundtvig on: `/data`
 └── preproccessed
 │   ├── da
 │   │   ├── tweet_id.txt
-│   │   ├── td_DATE_da_tlpdsn.ndjson
+│   │   ├── td_DATE_da_tlpdsn_001.ndjson
 │   │   └── ...
 │   ├── en
 │   │   └── ...
@@ -35,9 +35,9 @@ Ideally, all folders should use lowercase and be split by `_`.
 Raw data can be found in the `raw` folder and includes folders directly from the scrape. These include two categories, initial scrape (including historic data) and rehydration. Each folder is intended to include data from the scrape as well as a markdown (`readme.md`) on how the data was collected.
 
 ## Preprocessed Data
-The preprocessed data can be found in `preprocessed` and contains a folder for each language. Each of these folders contains a `.txt` file containing all the tweets ids (`tweet_id.txt`) and preprocessed Twitter data. The Twitter data is in the following format:
+The preprocessed data can be found in `preprocessed` and contains a folder for each language. Each of these folders contains a `.txt` file containing all the tweets ids (`tweet_id_001.txt`) and preprocessed Twitter data. The Twitter data is in the following format:
 
-```td_{DATE}_{LANG}_{PREPROCESSING FLAGS}.ndjson```
+```td_{DATE}_{LANG}_{PREPROCESSING FLAGS}_{ID}.ndjson```
 
 Where;
 - `td` stand for Twitter Data
@@ -50,6 +50,7 @@ Where;
   - `d`: Dependency Parsing
   - `s`: Sentiment Analysis
   - `n`: Named Entity Recognition  
+- `ID`: project id, 001 for HOPE
 
 
 ## Intended pipeline
