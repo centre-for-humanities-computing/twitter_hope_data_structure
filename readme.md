@@ -44,6 +44,7 @@ Where;
 - `DATE` is the date the tweets in the file is from
 - `PREPROCESSING FLAGS` is denotes what preprocessing have been applied to the data
 - `LANG` is the language the tweets are believed to contain (or at least should be processed as)
+  - `h`: Historic/purchased data tag
   - `t`: Tokenization
   - `l`: Lemmatization
   - `p`: POS-tags
